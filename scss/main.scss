@@ -1,0 +1,211 @@
+/* CSS Reset*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(35deg, rgb(138, 252, 252), rgb(253, 64, 64))
+    no-repeat;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Akai Wrapper */
+.akai-container {
+  display: grid;
+  grid-template-columns: repeat(5, 130px);
+  grid-template-rows: minmax(185px, auto);
+  position: relative;
+  width: 650px;
+
+  background: #333;
+  border: 3px solid rgb(255, 0, 0);
+  border-radius: 4px;
+}
+
+/* Aggregiator Section (Top-left) */
+.aggregiator-container {
+  position: relative;
+  display: grid;
+  height: 185px;
+}
+.brand-name {
+  align-self: center;
+  grid-column: 1 / span 2;
+  grid-row: 1 / 1;
+
+  color: white;
+  text-align: center;
+}
+
+span {
+  color: rgb(255, 0, 0);
+  font-size: 18px;
+}
+
+.btn {
+  height: 30px;
+  width: 40px;
+
+  background: #000;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  margin-left: 15px;
+
+  color: gray;
+  font-size: 8px;
+  font-weight: bold;
+  text-align: center;
+
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* MIDI Pads Section*/
+.pads-container {
+  display: grid;
+  grid-column: 2 / 4;
+  grid-row: 1 / 1;
+  grid-template-columns: repeat(4, 65px);
+  grid-template-rows: minmax(60px, auto);
+  justify-items: center;
+  align-items: center;
+  height: 185px;
+}
+
+.pad {
+  height: 55px;
+  width: 55px;
+
+  background: rgb(20, 20, 20);
+  border: 1px solid #fff;
+  border-radius: 3px;
+
+  color: #fff;
+  font-weight: bold;
+
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Dials Channel */
+.dials-container {
+  grid-column: 4/6;
+  grid-row: 1/1;
+
+  border: 1px solid white;
+}
+
+/* Keyboard Section */
+.keys-container {
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  position: relative;
+
+  height: 185px;
+  margin-left: 45px;
+}
+
+.white-key {
+  height: 185px;
+  padding: 0.25rem;
+  padding-top: 10rem;
+  width: 40px;
+
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 1px 1px 2px #000;
+
+  color: #000;
+  font-size: 12px;
+  line-height: 25px;
+
+  outline: none;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.9;
+  }
+}
+
+.black-key__container {
+  position: absolute;
+}
+
+.black-key {
+  position: relative;
+  height: 120px;
+  width: 25px;
+  left: 25px;
+  margin-right: 12px;
+
+  background: #000;
+  border: 3px solid #000;
+  border-radius: 0 0 2px 2px;
+
+  color: #fff;
+  font-size: 10px;
+
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    opacity: 0.9;
+  }
+
+  &:nth-child(5n + 5) {
+    margin-right: 50px;
+  }
+  &:nth-last-child(3) {
+    margin-left: 35px;
+  }
+  &:nth-of-type(2) {
+    margin-right: 55px;
+  }
+}
+
+/* Legend */
+.legend {
+  position: relative;
+  align-self: center;
+  left: 25px;
+  height: 250px;
+  width: 300px;
+
+  background: white;
+  border: 1px solid #000;
+  border-radius: 5px;
+
+  text-align: center;
+  font-weight: bold;
+
+  opacity: 0.5;
+
+  p {
+    font-size: 16px;
+  }
+}
