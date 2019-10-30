@@ -1,6 +1,2 @@
-# Ignore file named '.DS_Store'
 .DS_Store
-
-
-# Ignore folder named 'node_modules'
 node_modules
